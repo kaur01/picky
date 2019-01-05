@@ -1,0 +1,9 @@
+.heading {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 2rem !important;
+}
+
+.subheading {
+  font-size: 1.25rem;
+  font-weight: bold;
+}

@@ -1,0 +1,69 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #fdfdfd;
+  font-family: 'Lato', sans-serif;
+  font-size: 0.875rem;
+  color: rgba(74, 74, 74, 0.71);
+}
+
+.container-fluid {
+  margin-top: 60px;
+}
+
+.color-finzy-blue {
+  color: #0d3ab3 !important;
+}
+
+.text-error {
+  color: #de4e3d !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.background-color-white {
+  background-color: #fff !important;
+}
+
+.background-finzy-turquoise {
+  background-color: #3cdabf !important;
+}
+
+.color-faint-grey {
+  color: rgba(108, 108, 108, 0.5);
+}
+
+.primary-action-button {
+  padding: 14px 40px;
+  background-color: #0d3ab3;
+  border: 0;
+  font-size: 13px;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}
+
+.primary-action-button:disabled {
+  padding: 12px 38px;
+  background-color: #fff;
+  color: #0d3ab3;
+  border: 0.5px solid #0d3ab3;
+}
+
+.primary-action-button:active, .primary-action-button:hover, .primary-action-button:focus {
+  outline: none;
+}
+
+ul.check {
+  list-style: square url("../../assets/images/check-green.svg");
+}
+
+ul.check > li {
+  padding-left: 0.5rem;
+  margin-top: 0.5rem;
+}

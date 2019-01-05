@@ -1,0 +1,31 @@
+:host {
+  display: inline-flex;
+}
+
+.card {
+  flex-grow: 1;
+  background-color: #fff;
+  cursor: pointer;
+  outline: 0;
+}
+
+.card.active {
+  border: solid 0.0625rem #41ca38 !important;
+  box-shadow: 0 0 5px 0 rgba(65, 202, 56, 0.22);
+  background: url('../../../assets/check-circular.svg') no-repeat 0.375rem 0.375rem;
+}
+
+.label {
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+
+.icon {
+  max-height: available;
+}
+
+@media screen and (min-width: 992px) {
+  .label {
+    text-transform: uppercase;
+  }
+}
