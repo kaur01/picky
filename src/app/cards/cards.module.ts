@@ -1,16 +1,16 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {SelectorCardComponent} from './selector-card/selector-card.component';
-import {SelectorCardsComponent} from './selector-cards.component';
+import {CardComponent} from './card/card.component';
+import {CardsComponent} from './cards.component';
 
 @NgModule({
-  declarations: [SelectorCardsComponent, SelectorCardComponent],
+  declarations: [CardsComponent, CardComponent],
   imports: [
     CommonModule
   ],
-  exports: [SelectorCardComponent,
-    SelectorCardsComponent
+  exports: [CardComponent,
+    CardsComponent
   ]
 })
-export class SelectorCardsModule {
+export class CardsModule {
 }

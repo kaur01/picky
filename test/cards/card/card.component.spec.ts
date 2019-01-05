@@ -1,13 +1,13 @@
 import {expect} from 'chai';
 import {suite, test} from 'mocha-typescript';
-import {SelectorCardComponent} from '../../../src/app/selector-cards/selector-card/selector-card.component';
+import {CardComponent} from '../../../src/app/cards/card/card.component';
 
 @suite
-class SelectorCardComponentSpec {
-  private component: SelectorCardComponent;
+class CardComponentSpec {
+  private component: CardComponent;
 
   before(): void {
-    this.component = new SelectorCardComponent();
+    this.component = new CardComponent();
   }
 
   @test

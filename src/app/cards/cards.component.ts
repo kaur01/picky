@@ -1,18 +1,18 @@
 import {AfterViewInit, Component, ContentChildren, OnDestroy, QueryList} from '@angular/core';
-import {SelectorCardComponent} from './selector-card/selector-card.component';
+import {CardComponent} from './card/card.component';
 import {Subject} from 'rxjs';
 import {takeUntil} from 'rxjs/operators';
 
 @Component({
   selector: 'app-selector-cards',
-  templateUrl: './selector-cards.component.html'
+  templateUrl: './cards.component.html'
 })
-export class SelectorCardsComponent implements AfterViewInit, OnDestroy {
+export class CardsComponent implements AfterViewInit, OnDestroy {
   @ContentChildren('card')
-  cards: QueryList<SelectorCardComponent>;
+  cards: QueryList<CardComponent>;
   destroyed: Subject<boolean> = new Subject<boolean>();
 
-  private selectedCard: SelectorCardComponent;
+  private selectedCard: CardComponent;
 
   async ngAfterViewInit(): Promise<void> {
     this.cards.toArray().forEach(card => {
@@ -24,7 +24,7 @@ export class SelectorCardsComponent implements AfterViewInit, OnDestroy {
     });
   }
 
-  public selectCard(card: SelectorCardComponent) {
+  public selectCard(card: CardComponent) {
     if (this.selectedCard) {
       this.selectedCard.deselect();
     }
@@ -33,7 +33,7 @@ export class SelectorCardsComponent implements AfterViewInit, OnDestroy {
     card.select();
   }
 
-  public getSelectedCard(): SelectorCardComponent {
+  public getSelectedCard(): CardComponent {
     return this.selectedCard;
   }
 

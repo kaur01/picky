@@ -2,10 +2,10 @@ import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-selector-card',
-  templateUrl: './selector-card.component.html',
-  styleUrls: ['./selector-card.component.css']
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.css']
 })
-export class SelectorCardComponent {
+export class CardComponent {
 
   @Input()
   iconLink: string;
@@ -17,7 +17,7 @@ export class SelectorCardComponent {
   selected: boolean;
 
   @Output()
-  cardSelected = new EventEmitter<SelectorCardComponent>();
+  cardSelected = new EventEmitter<CardComponent>();
 
   onCardSelected(): void {
     this.cardSelected.emit(this);

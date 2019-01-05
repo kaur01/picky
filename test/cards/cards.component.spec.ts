@@ -1,18 +1,18 @@
 import {suite, test} from 'mocha-typescript';
 import {anything, instance, mock, verify, when} from 'ts-mockito';
-import {SelectorCardComponent} from '../../src/app/selector-cards/selector-card/selector-card.component';
-import {SelectorCardsComponent} from '../../src/app/selector-cards/selector-cards.component';
+import {CardComponent} from '../../src/app/cards/card/card.component';
+import {CardsComponent} from '../../src/app/cards/cards.component';
 import {expect} from 'chai';
 import {EventEmitter, QueryList} from '@angular/core';
 import {Observable} from 'rxjs';
 
 @suite
-class SelectorCardsComponentSpec {
-  private cardsComponent: SelectorCardsComponent;
-  private cardComponent = mock(SelectorCardComponent);
+class CardsComponentSpec {
+  private cardsComponent: CardsComponent;
+  private cardComponent = mock(CardComponent);
 
   before(): void {
-    this.cardsComponent = new SelectorCardsComponent();
+    this.cardsComponent = new CardsComponent();
   }
 
   @test
@@ -25,10 +25,10 @@ class SelectorCardsComponentSpec {
 
   @test
   public shouldDeselectAlreadySelectedCard(): void {
-    const card = mock(SelectorCardComponent);
+    const card = mock(CardComponent);
     this.cardsComponent.selectCard(instance(card));
 
-    const anotherCard = mock(SelectorCardComponent);
+    const anotherCard = mock(CardComponent);
     this.cardsComponent.selectCard(instance(anotherCard));
 
     verify(card.deselect()).once();
@@ -36,10 +36,10 @@ class SelectorCardsComponentSpec {
 
   @test
   public shouldSelectNewCardAfterDeselectingAlreadySelectedCard(): void {
-    const card = mock(SelectorCardComponent);
+    const card = mock(CardComponent);
     this.cardsComponent.selectCard(instance(card));
 
-    const anotherCard = mock(SelectorCardComponent);
+    const anotherCard = mock(CardComponent);
     this.cardsComponent.selectCard(instance(anotherCard));
 
     verify(anotherCard.select()).calledAfter(card.deselect());
@@ -58,7 +58,7 @@ class SelectorCardsComponentSpec {
     const observable = mock(Observable);
     const cardSelectedEvent = mock(EventEmitter);
 
-    const cardComponent = new SelectorCardComponent();
+    const cardComponent = new CardComponent();
     cardComponent.cardSelected = instance(cardSelectedEvent);
     this.cardsComponent.cards = instance(queryList);
 
