@@ -26,7 +26,7 @@ const assemble = async () => {
 
   return gulp.src([buildOutputDirectory + '/**/*', 'package.json', 'config/*.json'], {base: './'})
     .pipe(gulp.dest(outDir))
-    .pipe(zip('picky.zip'))
+    .pipe(zip('pick-a-card.zip'))
     .pipe(gulp.dest(distDir));
 };
 
@@ -66,7 +66,7 @@ const build = () => {
   const zip = require('gulp-zip');
 
   return gulp.src(['**/*', '!node_modules/**', '!package-lock.json'], {dot: true})
-    .pipe(zip('picky.zip'))
+    .pipe(zip('pick-a-card.zip'))
     .pipe(gulp.dest('build/dist/'));
 };
 

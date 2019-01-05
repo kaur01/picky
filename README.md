@@ -1,6 +1,6 @@
-# Picky
+# Pick-a-card
 
-[![npm (scoped)](https://img.shields.io/badge/npm-v6.4.1-blue.svg)](https://github.com/kaur01/picky)
+[![npm (scoped)](https://img.shields.io/badge/npm-v6.4.1-blue.svg)](https://github.com/kaur01/pick-a-card)
 
 Ready to use cards built with angular 7 and bootstrap 4. 
 A card is flexible and can contain any content. It includes options for a wide variety of content, contextual background colors, and powerful display options.
