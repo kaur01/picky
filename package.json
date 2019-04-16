@@ -10,6 +10,7 @@
     "cards",
     "scrollable cards"
   ],
+  "private": false,
   "scripts": {
     "ng": "ng",
     "start": "npm run build && ts-node src/server.ts",
