@@ -17,7 +17,8 @@
     "devStart": "ng serve --port 4000 --host 0.0.0.0",
     "build": "ng build --prod",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "packagr": "ng-packagr -p ng-package.json"
   },
   "dependencies": {
     "@angular/animations": "~7.1.0",
@@ -64,6 +65,7 @@
     "ts-mockito": "latest",
     "ts-node": "7.0.1",
     "tslint": "~5.11.0",
+    "ng-packagr": "^5.1.0",
     "typescript": "~3.1.6"
   }
 }
