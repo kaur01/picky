@@ -1,4 +1,4 @@
-# Pick-a-card
+# Angular Carousel
 
 [![npm (scoped)](https://img.shields.io/badge/npm-v6.4.1-blue.svg)](https://github.com/kaur01/pick-a-card)
 
